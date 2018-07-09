@@ -1,0 +1,12 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+spec:
+  replicas: 1
+  template:
+  spec:
+    containers:
+    - name: k8s_python
+      image: k8s_python:0.1
+      imagePullPolicy: "IfNotPresent"
+      ports:
+      - containerPort: 5035
